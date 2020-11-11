@@ -6,11 +6,17 @@ public class StageManager : MonoBehaviour
 {
     public static StageManager Instance;
     public static string nowStageNum;
+    public static int scoreItemSmall;
+    public static int scoreItemBig;
+    public static bool gameResult;
 
     // Start is called before the first frame update
     void Start()
     {
         //nowStageNum = "0";
+        scoreItemSmall = 0;
+        scoreItemBig = 0;
+        gameResult = true;
     }
 
     // Update is called once per frame
@@ -28,4 +34,18 @@ public class StageManager : MonoBehaviour
         //SceneChanger.Instance.SceneChange("Stage" + _num);
         SceneChanger.Instance.SceneChange("Result");
     }
+
+    public void AcquisitionScoreBig()
+    {
+        if (scoreItemBig < 3)
+        {
+            scoreItemBig++;
+        }
+    }
+
+    public void AcquisitionScoreSmall()
+    {
+        scoreItemSmall++;
+    }
+
 }
