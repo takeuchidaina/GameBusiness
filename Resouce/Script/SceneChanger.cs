@@ -35,12 +35,12 @@ public class SceneChanger : MonoBehaviour
 
     public void OnClickTryAgain()
     {
-        SceneChange("Stage"+StageManager.nowStageNum);
+        SceneChange("stage"+StageManager.nowStageNum);
     }
 
     public void OnClickNextStage()
     {
-        SceneChange("Stage" + StageCalc(StageManager.nowStageNum));
+        SceneChange("stage" + StageCalc(StageManager.nowStageNum));
     }
 
     private string StageCalc(string _stageNum)

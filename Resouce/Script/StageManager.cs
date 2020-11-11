@@ -31,8 +31,8 @@ public class StageManager : MonoBehaviour
         nowStageNum = _num;
 
         //シーン遷移
-        //SceneChanger.Instance.SceneChange("Stage" + _num);
-        SceneChanger.Instance.SceneChange("Result");
+        SceneChanger.Instance.SceneChange("stage" + _num);
+        //SceneChanger.Instance.SceneChange("Result");
     }
 
     public void AcquisitionScoreBig()
