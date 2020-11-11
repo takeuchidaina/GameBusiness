@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gimmick1 : MonoBehaviour   //反復移動するギミック
+public class gimmick3 : MonoBehaviour   //反復移動するギミック
 {
 
     Vector3 FirstPosition;  //初期位置(反復する線上の中心点になる)
