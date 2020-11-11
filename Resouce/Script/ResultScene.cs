@@ -6,12 +6,24 @@ using UnityEngine.UI;
 public class ResultScene : MonoBehaviour
 {
     GameObject stageNum;
+    GameObject scoreItemSmall;
+    GameObject scoreItemBig;
+    GameObject gameResult;
 
     // Start is called before the first frame update
     void Start()
     {
         stageNum = GameObject.Find("StageNum");
         SetStageNum();
+
+        gameResult = GameObject.Find("GameResult");
+        SetGameResult();
+
+        scoreItemSmall = GameObject.Find("ScoreItemSmall");
+        SetScoreItemSmall();
+
+        scoreItemBig = GameObject.Find("ScoreItemBig");
+        SetScoreItemBig();
     }
 
     // Update is called once per frame
@@ -22,7 +34,52 @@ public class ResultScene : MonoBehaviour
 
     private void SetStageNum()
     {
-        //stageNum.GetComponent<Text>().text = "";
-        stageNum.GetComponent<Text>().text = "Stgae " + StageManager.nowStageNum;
+        if (StageManager.nowStageNum != null)
+        {
+            stageNum.GetComponent<Text>().text = "Stgae " + StageManager.nowStageNum;
+        }
+        else
+        {
+            stageNum.GetComponent<Text>().text = "Read error.";
+        }
+    }
+
+    private void SetGameResult()
+    {
+        if (StageManager.gameResult == true)
+        {
+            gameResult.GetComponent<Text>().text = "STAGE CLEAR";
+        }
+        else
+        {
+            gameResult.GetComponent<Text>().text = "STAGE FAILED";
+        }
+    }
+
+    private void SetScoreItemSmall()
+    {
+        scoreItemSmall.GetComponent<Text>().text = "x" + StageManager.scoreItemSmall.ToString();
+    }
+
+    private void SetScoreItemBig()
+    {
+        switch (StageManager.scoreItemBig)
+        {
+            case 0:
+                scoreItemBig.GetComponent<Text>().text = "☆　☆　☆";
+                break;
+            case 1:
+                scoreItemBig.GetComponent<Text>().text = "★　☆　☆";
+                break;
+            case 2:
+                scoreItemBig.GetComponent<Text>().text = "★　★　☆";
+                break;
+            case 3:
+                scoreItemBig.GetComponent<Text>().text = "★　★　★";
+                break;
+            default:
+                scoreItemBig.GetComponent<Text>().text = "★　★　★";
+                break;
+        }
     }
 }

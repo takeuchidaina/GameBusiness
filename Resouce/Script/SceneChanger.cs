@@ -32,4 +32,22 @@ public class SceneChanger : MonoBehaviour
         Application.Quit();
     #endif
     }
+
+    public void OnClickTryAgain()
+    {
+        SceneChange("stage"+StageManager.nowStageNum);
+    }
+
+    public void OnClickNextStage()
+    {
+        SceneChange("stage" + StageCalc(StageManager.nowStageNum));
+    }
+
+    private string StageCalc(string _stageNum)
+    {
+        int num;
+        num = int.Parse(_stageNum);
+        num += 1;
+        return num.ToString();
+    }
 }
