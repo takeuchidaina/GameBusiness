@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 5185611755606488231}
   - component: {fileID: 5185611755606488230}
   - component: {fileID: 5185611755606488224}
+  - component: {fileID: 5185611755606488229}
   m_Layer: 0
   m_Name: gimmick3
   m_TagString: Untagged
@@ -428,6 +429,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5185611755606488229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185611755606488228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70efa87d7322b429d6862503eb2a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovePosition: {x: 0, y: 0, z: 0}
+  speed: 0
 --- !u!50 &5185611755606488230
 Rigidbody2D:
   serializedVersion: 4
@@ -475,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: gimmick1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272458, guid: dcd48c9da637a4f43b40a02d30d0b5ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef,
         type: 3}
