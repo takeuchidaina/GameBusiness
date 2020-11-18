@@ -9,6 +9,7 @@ public class ResultScene : MonoBehaviour
     GameObject scoreItemSmall;
     GameObject scoreItemBig;
     GameObject gameResult;
+    GameObject nextStgaeButton;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,9 @@ public class ResultScene : MonoBehaviour
 
         scoreItemBig = GameObject.Find("ScoreItemBig");
         SetScoreItemBig();
+
+        nextStgaeButton = GameObject.Find("NextStage");
+        SetNextStageButton();
     }
 
     // Update is called once per frame
@@ -80,6 +84,18 @@ public class ResultScene : MonoBehaviour
             default:
                 scoreItemBig.GetComponent<Text>().text = "★　★　★";
                 break;
+        }
+    }
+
+    private void SetNextStageButton()
+    {
+        if (StageManager.nowStageNum == "9")
+        {
+            nextStgaeButton.SetActive(false);
+        }
+        else
+        {
+            nextStgaeButton.SetActive(true);
         }
     }
 }

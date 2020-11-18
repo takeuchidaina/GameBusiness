@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 1934728750}
   - component: {fileID: 1934728749}
   m_Layer: 5
-  m_Name: StageSelect
+  m_Name: NextStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1369,7 +1369,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8792875383964502568, guid: 99e3537f282a5cb47bbd01a78968601b,
           type: 3}
-        m_MethodName: OnClickTryAgain
+        m_MethodName: OnClickNextStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
