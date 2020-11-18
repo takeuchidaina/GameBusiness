@@ -48,4 +48,10 @@ public class StageManager : MonoBehaviour
         scoreItemSmall++;
     }
 
+    //true クリア　false 失敗
+    public void StageEnd(bool _result)
+    {
+        gameResult = _result;
+        SceneChanger.Instance.SceneChange("Result");
+    }
 }

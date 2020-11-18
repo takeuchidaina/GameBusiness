@@ -16,7 +16,10 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            InGameEsc();
+        }
     }
 
     public void SceneChange(string _scene)
@@ -49,5 +52,11 @@ public class SceneChanger : MonoBehaviour
         num = int.Parse(_stageNum);
         num += 1;
         return num.ToString();
+    }
+
+    private void InGameEsc()
+    {
+        StageManager.nowStageNum = "1";
+        SceneChange("Result");
     }
 }
