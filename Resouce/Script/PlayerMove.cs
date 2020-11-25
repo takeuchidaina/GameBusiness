@@ -61,7 +61,7 @@ namespace Player
             //{
             //    // this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
             //    transform.rotation = Quaternion.LookRotation(new Vector3(0.0f, 0.0f, 0.0f));
-            //    Debug.Log("キーが離されたよ");
+            //    
             //}
             /////////////////////////// ←移動
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -78,7 +78,7 @@ namespace Player
             //{
             //   // this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
             //    transform.rotation = Quaternion.LookRotation(new Vector3(0.0f,0.0f,0.0f) );
-            //    Debug.Log("キーが離されたよ");
+            //    
             //}
             ////////////////////////// ↑移動
             if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
