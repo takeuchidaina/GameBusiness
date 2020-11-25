@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+public class PlayerCollsion : MonoBehaviour
 {
     [SerializeField]
-    GameObject GameObject;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +20,8 @@ public class Goal : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(GameObject);
+        if (collision.gameObject.tag == "Goal") { }
+        else if (collision.gameObject.tag == "Wall") Destroy(player);
+       // StageManager.Instance.StageEnd(true);
     }
-
-
 }
