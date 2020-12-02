@@ -44,7 +44,7 @@ namespace Player
         private void Move()
         {
 
-            Camera.transform.position = new Vector3(transform.position.x, transform.position.y,-0.75f);
+            //Camera.transform.position = new Vector3(transform.position.x, transform.position.y,-0.75f);
 
 
             //////////////////////////// →移動
