@@ -29,11 +29,16 @@ public class SceneChanger : MonoBehaviour
 
     public void SceneChange(string _scene)
     {
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
         //se再生
         audioSource.PlayOneShot(sound_decision);
 
         //se終了後にシーン変更
         StartCoroutine(Checking(audioSource,()=> { SceneManager.LoadScene(_scene); }));
+        //SceneManager.LoadScene(_scene);
     }
 
     public void OnClickEndButton()
@@ -43,9 +48,7 @@ public class SceneChanger : MonoBehaviour
         audioSource.PlayOneShot(sound_cancel);
 
         //se終了後にシーン変更
-        StartCoroutine(Checking(audioSource, () => 
-        { UnityEditor.EditorApplication.isPlaying = false; }
-        ));
+        StartCoroutine(Checking(audioSource, () => { UnityEditor.EditorApplication.isPlaying = false; }));
 
 #else
         //se再生
@@ -62,11 +65,13 @@ public class SceneChanger : MonoBehaviour
     public void OnClickTryAgain()
     {
         SceneChange("stage"+StageManager.nowStageNum);
+        //SceneChange("stage1");
     }
 
     public void OnClickNextStage()
     {
         SceneChange("stage" + StageCalc(StageManager.nowStageNum));
+        //SceneChange("stage2");
     }
 
     private string StageCalc(string _stageNum)
