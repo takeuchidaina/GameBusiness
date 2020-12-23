@@ -14,11 +14,19 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
     int effectFlg = 0;              //エフェクトフラグ
     float alpha_Sin;
 
+    public GameObject particleObject;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         FirstPosition = transform.position;
+
+        Vector3 tmpScale = new Vector3(destroyField, destroyField, 0);
+        transform.GetChild(0).gameObject.GetComponent<Transform>().localScale = tmpScale;
+
+        gameObject.GetComponent<CircleCollider2D>().radius = destroyField / 2;
     }
 
     // Update is called once per frame
@@ -51,7 +59,8 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
         Debug.Log("PlayerDestroyCheck");
         //二点間の距離とって、あたり判定の円の半径の内側まだいるならPlayer破壊
         //Vector3 playerVec3 = GameObject.Find("Player").transform.position);
-        if (destroyField > Vector3.Distance(GameObject.Find("Player").transform.position,FirstPosition)) {
+        if (destroyField / 2 > Vector3.Distance(GameObject.Find("Player").transform.position, FirstPosition))
+        {
 
             //プレイヤーの破壊
             Debug.Log("PlayerDestroy");
@@ -60,6 +69,7 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
 
 
         //プレイヤーが破壊されようがされまいが、自身を破壊する
+        Instantiate(particleObject, this.transform.position, Quaternion.identity); //パーティクル用ゲームオブジェクト生成
         Destroy(this.gameObject);
     }
 
