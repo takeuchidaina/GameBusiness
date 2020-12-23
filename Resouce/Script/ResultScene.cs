@@ -10,6 +10,9 @@ public class ResultScene : MonoBehaviour
     GameObject scoreItemBig;
     GameObject gameResult;
     GameObject nextStgaeButton;
+    public AudioClip sound_win;
+    public AudioClip sound_lose;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +23,29 @@ public class ResultScene : MonoBehaviour
         gameResult = GameObject.Find("GameResult");
         SetGameResult();
 
+        /*
         scoreItemSmall = GameObject.Find("ScoreItemSmall");
         SetScoreItemSmall();
 
         scoreItemBig = GameObject.Find("ScoreItemBig");
         SetScoreItemBig();
+        */
 
         nextStgaeButton = GameObject.Find("NextStage");
         SetNextStageButton();
+
+        audioSource = GetComponent<AudioSource>();
+
+        if (StageManager.gameResult == true)
+        {
+            audioSource.PlayOneShot(sound_lose);
+            //audioSource.PlayOneShot(sound_win);
+        }
+        else
+        {
+            audioSource.PlayOneShot(sound_lose);
+        }
+        
     }
 
     // Update is called once per frame
@@ -59,7 +77,7 @@ public class ResultScene : MonoBehaviour
             gameResult.GetComponent<Text>().text = "STAGE FAILED";
         }
     }
-
+    /*
     private void SetScoreItemSmall()
     {
         scoreItemSmall.GetComponent<Text>().text = "x" + StageManager.scoreItemSmall.ToString();
@@ -86,6 +104,7 @@ public class ResultScene : MonoBehaviour
                 break;
         }
     }
+    */
 
     private void SetNextStageButton()
     {
