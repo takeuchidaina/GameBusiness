@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Player
 {
     public class PlayerMove : MonoBehaviour
     {
-        [SerializeField] Camera Camera;
+        [SerializeField]  public Camera Camera;
         private bool isRotate;  // playerの角度ふらぐ
         [SerializeField] private float AscendSpeed; // 浮上スピード
         [SerializeField] private float UpSpeed;     // w入力時のスピードアップ
@@ -18,8 +17,10 @@ namespace Player
 
 
         private Vector3 vec;
-        private Vector3 speed;
+     //   private Vector3 speed;
+        public float speed;
 
+        private  const float NomalSpeed = 10;
         // Use this for initialization
         private void Awake()
         {
@@ -32,7 +33,7 @@ namespace Player
 
             PlayerAngle = 1.0f;
             vec = transform.rotation * new Vector3(0, 1, 0);
-            speed = new Vector3(0, 1, 0); 
+            speed = NomalSpeed;
         }
 
         private void Update()
@@ -44,7 +45,7 @@ namespace Player
         private void Move()
         {
 
-            //Camera.transform.position = new Vector3(transform.position.x, transform.position.y,-0.75f);
+            Camera.transform.position = new Vector3(transform.position.x, transform.position.y,-0.75f);
 
 
             //////////////////////////// →移動
@@ -84,20 +85,29 @@ namespace Player
             if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 // transform.position += new Vector3(0, UpSpeed, 0 * Time.deltaTime);
-                speed += new Vector3(0,UpSpeed,0);
+                speed += 0.5f;
             }
-
+            else
+            {
+                if (NomalSpeed < speed) speed-=0.05f;
+            }
             ////////////////////////// ↓移動
             if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
             {
                 //transform.position += new Vector3(0, -DawnSpeed, 0 * Time.deltaTime);
-                speed += new Vector3(0, -DawnSpeed, 0);
+                speed += -0.5f;
             }
-
+            else
+            {
+                 if (NomalSpeed > speed) speed += 0.05f;
+            }
+          
+            
+            // speed = NomalSpeed;
             ////////////////////////// 常時↑移動
             //  transform.position += new Vector3(0, AscendSpeed, 0 * Time.deltaTime);
-            vec = transform.rotation * new Vector3(1, 1, 1);
-            transform.position += (vec + speed)*Time.deltaTime;
+            vec =this.transform.up*UpSpeed;
+            transform.position -= (vec * speed)*Time.deltaTime;
         }
     }
 }
