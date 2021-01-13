@@ -197,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 1898658590956673029, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 10545938}
+      objectReference: {fileID: 0}
     - target: {fileID: 2148227954742063148, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: particleObject
       value: 
@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 7375414338326691805, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 10545938}
+      objectReference: {fileID: 0}
     - target: {fileID: 8038194912998351684, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -246,14 +246,21 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 39578028}
+    - target: {fileID: 8555836886174684676, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555836886174684680, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1754753957}
+    - target: {fileID: 8555836886174684686, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 39578028}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
---- !u!1 &10545938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1988959072326566, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
-  m_PrefabInstance: {fileID: 10545937}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &14160423
 PrefabInstance:
   m_ObjectHideFlags: 0

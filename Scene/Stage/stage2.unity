@@ -7189,11 +7189,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3763110438659587829, guid: 3d86799d39d31424bb8e8baa03d77ff8, type: 3}
   m_PrefabInstance: {fileID: 1399021067}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1414008751 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1988959072326566, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
-  m_PrefabInstance: {fileID: 1815816987}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429550191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9583,7 +9578,7 @@ PrefabInstance:
     - target: {fileID: 1898658590956673029, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1414008751}
+      objectReference: {fileID: 0}
     - target: {fileID: 2148227954742063148, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: particleObject
       value: 
@@ -9619,7 +9614,7 @@ PrefabInstance:
     - target: {fileID: 7375414338326691805, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1414008751}
+      objectReference: {fileID: 0}
     - target: {fileID: 8038194912998351684, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -9629,6 +9624,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 3e6fbfaf4fc108f4bb4a56cc1735d3a6, type: 3}
     - target: {fileID: 8553107770454738878, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 917330790}
+    - target: {fileID: 8555836886174684676, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555836886174684680, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1777032415}
+    - target: {fileID: 8555836886174684686, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: Camera
       value: 
       objectReference: {fileID: 917330790}
