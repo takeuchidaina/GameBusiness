@@ -16,6 +16,7 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
 
     public GameObject particleObject;
 
+    public AudioSource audio; 
 
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
         transform.GetChild(0).gameObject.GetComponent<Transform>().localScale = tmpScale;
 
         gameObject.GetComponent<CircleCollider2D>().radius = destroyField / 2;
+
     }
 
     // Update is called once per frame
@@ -70,6 +72,8 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
 
         //プレイヤーが破壊されようがされまいが、自身を破壊する
         Instantiate(particleObject, this.transform.position, Quaternion.identity); //パーティクル用ゲームオブジェクト生成
+        audio.Play();
+
         Destroy(this.gameObject);
     }
 
