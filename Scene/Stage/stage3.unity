@@ -3588,11 +3588,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.3
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.8
+      value: -17.13
       objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3634,13 +3634,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: gimmick1
       objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272458, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: MovePosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: MovePosition.x
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: speed
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
@@ -4665,7 +4673,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.723373
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4711,9 +4719,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: gimmick1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272458, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: MovePosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: MovePosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: speed
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
@@ -4877,7 +4897,7 @@ GameObject:
   - component: {fileID: 1422948266}
   m_Layer: 0
   m_Name: Gimmich
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4908,7 +4928,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.610914
+      value: -13.2
       objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272457, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4954,9 +4974,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: gimmick1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272458, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
       propertyPath: MovePosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480088973203272459, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
+      propertyPath: speed
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd48c9da637a4f43b40a02d30d0b5ef, type: 3}
@@ -6518,6 +6546,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8555836886174684676, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555836886174684676, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8555836886174684680, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
       propertyPath: audio
       value: 
@@ -6526,6 +6562,10 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 217279970}
+    - target: {fileID: 8555836886174684687, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2ce1fb9d977e03b49a1ce0113faf945e, type: 3}
