@@ -21,10 +21,7 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            InGameEsc();
-        }
+
     }
 
     public void SceneChange(string _scene)
