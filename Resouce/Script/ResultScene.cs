@@ -108,7 +108,7 @@ public class ResultScene : MonoBehaviour
 
     private void SetNextStageButton()
     {
-        if (StageManager.nowStageNum == "9")
+        if (StageManager.nowStageNum == "9" || StageManager.gameResult == false)
         {
             nextStgaeButton.SetActive(false);
         }
