@@ -75,7 +75,8 @@ public class SceneChanger : MonoBehaviour
     {
         int num;
         num = int.Parse(_stageNum);
-        num += 1;
+        num = num + 1;
+        StageManager.nowStageNum = num.ToString();
         return num.ToString();
     }
 

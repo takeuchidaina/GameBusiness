@@ -10,6 +10,7 @@ public class ResultScene : MonoBehaviour
     GameObject scoreItemBig;
     GameObject gameResult;
     GameObject nextStgaeButton;
+    GameObject scoreTime;
     public AudioClip sound_win;
     public AudioClip sound_lose;
     AudioSource audioSource;
@@ -22,6 +23,9 @@ public class ResultScene : MonoBehaviour
 
         gameResult = GameObject.Find("GameResult");
         SetGameResult();
+
+        scoreTime = GameObject.Find("ScoreTime");
+        SetScoreTime();
 
         /*
         scoreItemSmall = GameObject.Find("ScoreItemSmall");
@@ -108,7 +112,7 @@ public class ResultScene : MonoBehaviour
 
     private void SetNextStageButton()
     {
-        if (StageManager.nowStageNum == "9")
+        if (StageManager.nowStageNum == "9" || StageManager.gameResult == false)
         {
             nextStgaeButton.SetActive(false);
         }
@@ -116,5 +120,10 @@ public class ResultScene : MonoBehaviour
         {
             nextStgaeButton.SetActive(true);
         }
+    }
+
+    private void SetScoreTime()
+    {
+        scoreTime.GetComponent<Text>().text = TimeATK.timer.ToString("F2");
     }
 }
