@@ -55,7 +55,6 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
             Invoke("PlayerDestroy", timer);
             audio2.Play();
 
-
         }
     }
 
@@ -70,6 +69,8 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
             //プレイヤーの破壊
             Debug.Log("PlayerDestroy");
             Destroy(GameObject.Find("Player"));
+
+            StageManager.Instance.StageEnd(false);
         }
 
 
