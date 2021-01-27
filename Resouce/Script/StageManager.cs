@@ -17,6 +17,7 @@ public class StageManager : MonoBehaviour
         scoreItemSmall = 0;
         scoreItemBig = 0;
         gameResult = true;
+        Instance = this;
     }
 
     // Update is called once per frame
