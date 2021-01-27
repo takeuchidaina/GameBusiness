@@ -15,6 +15,7 @@ public class PlayerDeadEffect : MonoBehaviour
         {
             Instantiate(particleObject, this.transform.position, Quaternion.identity); //パーティクル用ゲームオブジェクト生成
             audio.Play();
+            StageManager.Instance.StageEnd(false);
             Destroy(this.gameObject); //衝突したゲームオブジェクトを削除
 
         }

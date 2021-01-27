@@ -13,7 +13,7 @@ namespace Player
         [SerializeField] private float SideSpeed;   // a,dの入力時スピード
         [SerializeField] private float DawnSpeed;   // s入力時のスピードダウン量
         private float PlayerAngle;
-
+        [SerializeField] AudioSource audio;
 
 
         private Vector3 vec;
@@ -86,6 +86,7 @@ namespace Player
             {
                 // transform.position += new Vector3(0, UpSpeed, 0 * Time.deltaTime);
                 speed += 0.5f;
+                if (audio.isPlaying == false) audio.Play();
             }
             else
             {
@@ -101,8 +102,7 @@ namespace Player
             {
                  if (NomalSpeed > speed) speed += 0.05f;
             }
-          
-            
+
             // speed = NomalSpeed;
             ////////////////////////// 常時↑移動
             //  transform.position += new Vector3(0, AscendSpeed, 0 * Time.deltaTime);
