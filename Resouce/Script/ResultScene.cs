@@ -58,7 +58,7 @@ public class ResultScene : MonoBehaviour
     {
         if (StageManager.nowStageNum != null)
         {
-            stageNum.GetComponent<Text>().text = "Stgae " + StageManager.nowStageNum;
+            stageNum.GetComponent<Text>().text = "Stage " + StageManager.nowStageNum;
         }
         else
         {
