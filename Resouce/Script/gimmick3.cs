@@ -16,7 +16,8 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
 
     public GameObject particleObject;
 
-    public AudioSource audio; 
+    public AudioSource audio;
+    public AudioSource audio2;
 
 
     // Start is called before the first frame update
@@ -52,7 +53,9 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
             Debug.Log("DereyStart");
             effectFlg = 1;
             Invoke("PlayerDestroy", timer);
-           
+            audio2.Play();
+
+
         }
     }
 
@@ -72,6 +75,7 @@ public class gimmick3 : MonoBehaviour   //プレイヤーが近づくと一定�
 
         //プレイヤーが破壊されようがされまいが、自身を破壊する
         Instantiate(particleObject, this.transform.position, Quaternion.identity); //パーティクル用ゲームオブジェクト生成
+        audio2.Stop();
         audio.Play();
 
         Destroy(this.gameObject);
