@@ -5,7 +5,7 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     [SerializeField]
-    GameObject GameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +18,10 @@ public class Goal : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(GameObject);
+        StageManager.Instance.StageEnd(true);
+        Destroy(this);
     }
 
 
