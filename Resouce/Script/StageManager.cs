@@ -16,7 +16,6 @@ public class StageManager : MonoBehaviour
         //nowStageNum = "0";
         scoreItemSmall = 0;
         scoreItemBig = 0;
-        gameResult = true;
         Instance = this;
     }
 
