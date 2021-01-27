@@ -797,6 +797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameEndButton
       objectReference: {fileID: 0}
+    - target: {fileID: 2384274750449343861, guid: 20279417c21f01143ad671d79b334a1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2384274750449343858, guid: 20279417c21f01143ad671d79b334a1c,
         type: 3}
       propertyPath: m_LocalPosition.x
